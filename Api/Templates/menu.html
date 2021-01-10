@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<body >
+
+<div class="container">
+<h1>Entrez vos performances StarCraft :</h1>
+    <div class="form-group row">
+        <br>
+        <div class="col-xs-3">
+        <label >APM</label>
+        <input class="form-control" id="APM" type="text" value="150" placeholder="Enter APM">
+        <small class="form-text text-muted">compris entre 15 et 400</small>
+        </div>
+        <br>
+        <div class="col-xs-3">
+            <label >SelectByHotkeys</label>
+            <input class="form-control" id="SelectByHotkeys" type="text" value="0.02" placeholder="Enter SelectByHotkeys">
+            <small class="form-text text-muted">compris entre 0 et 0.04</small>
+        </div>
+        <br>
+        <div class="col-xs-3">
+            <label >AssignToHotkeys</label>
+            <input class="form-control" id="AssignToHotkeys" type="text" value="0.0005" placeholder="Enter AssignToHotkeys">
+            <small class="form-text text-muted">compris entre 0 et 0.001</small>
+        </div>
+        <br>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-3">
+            <label >UniqueHotkeys</label>
+            <input class="form-control" id="UniqueHotkeys" type="text" value="5" placeholder="Enter UniqueHotkeys">
+            <small class="form-text text-muted">compris entre 0 et 10</small>
+        </div>
+        <br>
+        <div class="col-xs-3">
+            <label >MinimapAttacks</label>
+            <input class="form-control" id="MinimapAttacks" type="text" value="0.0015" placeholder="Enter MinimapAttacks">
+            <small class="form-text text-muted">compris entre 0 et 0.003</small>
+        </div>
+        <br>
+        <div class="col-xs-3">
+            <label >MinimapRightClicks</label>
+            <input class="form-control" id="MinimapRightClicks" type="text" value="0.002" placeholder="Enter MinimapRightClicks">
+            <small class="form-text text-muted">compris entre 0 et 0.004</small>
+        </div>
+        <br>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-3">
+            <label >NumberOfPACs</label>
+            <input class="form-control" id="NumberOfPACs" type="text" value="0.0025" placeholder="Enter NumberOfPACs">
+            <small class="form-text text-muted">compris entre 0.0006 et 0.005</small>
+        </div>
+        <br>
+        <div class="col-xs-3">
+            <label >TotalMapExplored</label>
+            <input class="form-control" id="TotalMapExplored" type="text" value="30" placeholder="Enter TotalMapExplored">
+            <small class="form-text text-muted">compris entre 5 et 60</small>
+        </div>
+        <br>
+        <div class="col-xs-3">
+            <label >ActionLatency</label>
+            <input class="form-control" id="ActionLatency" type="text" value="100" placeholder="Enter ActionLatency">
+            <small class="form-text text-muted">compris entre 24 et 190</small>
+        </div>
+        <br>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-3">
+            <label >ActionsInPAC</label>
+            <input class="form-control" id="ActionsInPAC" type="text" value="10" placeholder="Enter ActionsInPAC">
+            <small class="form-text text-muted">compris entre 1 et 20</small>
+        </div>
+        <br>
+        <div class="col-xs-3">
+            <label >WorkersMade</label>
+            <input class="form-control" id="WorkersMade" type="text" value="0.004" placeholder="Enter WorkersMade">
+            <small class="form-text text-muted">compris entre 0 et 0.008</small>
+        </div>
+        <br>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-3">
+            <label >GapBetweenPACs</label>
+            <input class="form-control" id="GapBetweenPACs" type="text" value="120" placeholder="Enter GapBetweenPACs">
+            <small class="form-text text-muted">compris entre 10 et 240</small>
+        </div>
+        <br>
+    </div>
+    <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" onclick="getLeague(this)">Predire League</a>
+    </div>
+</div>
+</body>
+<script language="JavaScript">
+    function getLeague(source){
+        var APM = document.getElementById('APM').value;
+        var SelectByHotkeys = document.getElementById('SelectByHotkeys').value;
+        var AssignToHotkeys = document.getElementById('AssignToHotkeys').value;
+        var UniqueHotkeys = document.getElementById('UniqueHotkeys').value;
+        var MinimapAttacks = document.getElementById('MinimapAttacks').value;
+        var MinimapRightClicks = document.getElementById('MinimapRightClicks').value;
+        var NumberOfPACs = document.getElementById('NumberOfPACs').value;
+        var ActionLatency = document.getElementById('ActionLatency').value;
+        var ActionsInPAC = document.getElementById('ActionsInPAC').value;
+        var TotalMapExplored = document.getElementById('TotalMapExplored').value;
+        var WorkersMade = document.getElementById('WorkersMade').value;
+        var GapBetweenPACs = document.getElementById('GapBetweenPACs').value;
+        
+        window.location.href = '/api/?apm='+APM+'&selectbyhotkeys='+SelectByHotkeys
+        +'&assigntohotkeys='+AssignToHotkeys+'&uniquehotkeys='+UniqueHotkeys
+        +'&minimapattacks='+MinimapAttacks+'&minimaprightclicks='+MinimapRightClicks
+        +'&numberofpacs='+NumberOfPACs+'&gapbetweenpacs='+GapBetweenPACs
+        +'&actionlatency='+ActionLatency+'&actionsinpac='+ActionsInPAC
+        +'&totalmapexplored='+TotalMapExplored+'&workersmade='+WorkersMade; 
+
+    }
+</script>
+</html>
