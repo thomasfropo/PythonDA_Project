@@ -9,4 +9,4 @@ Nous avons réussi à sortir un modèle qui prédit avec une précision de 0.39.
 
 Vous retrouverez dans ce dossier, le code utilisé pour parvenir à nos fins, un powerpoint explicatif et une api.
 
-Pour utilisez l'api il suffit de télécharger le fichier et de lancer le api.py
+Pour utilisez l'api il suffit de télécharger le fichier et de lancer le api.py et après avoir remplit toute les cases, cliquez sur " Prédire League ".
